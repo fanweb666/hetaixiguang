@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*以上css可不用，仅作为展示外观样式*/
+
+.list {
+    width: 200px;
+    background: rgba(0, 147, 228, 1);
+    overflow: hidden;
+}
+
+.navTitle {
+    font-size: 18px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(254, 254, 254, 1);
+    line-height: 60px;
+    margin-top: 10px;
+    margin-left: 36px;
+}
+
+.list ul {
+    list-style: none;
+}
+
+.list>ul>li {
+    width: 100%;
+    /* border-bottom: 1px solid #666; */
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.list>ul>li p[class=title] {
+    text-align: left;
+    background: rgba(0, 147, 228, 1);
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    position: relative;
+    padding-left: 36px;
+    color: white
+}
+
+.list>ul>li p[class=title]>span {
+    position: absolute;
+    right: 10%;
+}
+
+.list-se {
+    overflow: hidden;
+    display: none;
+}
+
+.list-se>p {
+    background: rgba(0, 147, 228, 1) !important;
+    color: white;
+}
+
+.list-se>li {
+    position: relative;
+    right: -100%;
+    -webkit-transition: right .5s;
+    -moz-transition: right .5s;
+    -o-transition: right .5s;
+    transition: right .5s;
+}
+
+.list-se>li>p {
+    background: #002058;
+    color: #f0f0f0;
+    height: 42px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 36px;
+    line-height: 42px;
+    -webkit-transition: border .5s;
+    transition: border .5s;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+}
+
+.list-se>li>p:hover {
+    background: rgba(0, 82, 218, 1);
+    box-shadow: 0px 5px 6px 0px rgba(0, 24, 66, 0.41);
+}
+.list-se>li.active>p{
+    background: rgba(0, 82, 218, 1);
+
+}

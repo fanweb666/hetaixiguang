@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>合泰新光</title>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/newsDetail.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/lyf_add.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+</head>
+
+<body>
+    <div class="main-header">
+        <div class="header-logo">
+            <img class="w-100 h-100" src="../images/login/logo.png" alt="">
+        </div>
+        <div class="header-nav">
+            <a href="../index.html">首页</a>
+            <a href="./aboutus.html">关于我们</a>
+            <a href="./productList.html">主营产品</a>
+            <a class="active" href="./research.html">科研实力</a>
+            <a href="./downloadCenter.html">信息服务</a>
+            <a href="./news.html">新闻动态</a>
+            <a href="./addUs.html">加入我们</a>
+        </div>
+        <div class="header-sign">
+            <a href="../html/login.html">登录</a>
+            <p>|</p><a href="../html/register.html">注册</a>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="main-banner lyf-banner">
+        <!-- <div class="swiper-container" id="researchSwp">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> -->
+                    <img class="w-100 h-100" src="../images/research/research-banner.png" alt="">
+                <!-- </div>
+                <div class="swiper-slide">
+                    <img class="w-100 h-100" src="../images/research/research-banner.png" alt="">
+                </div>
+            </div> -->
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+    <!-- <script>
+        var swiper = new Swiper('#researchSwp', {
+            loop: true,
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+        });
+    </script> -->
+    <!-- tabbar -->
+
+    <div class="tabbar">
+        <div class="tab active" >综合楼</div>
+        <div class="tab">生产车间</div>
+        <div class="tab">动力车间</div>
+        <div class="tab">仓储</div>
+    </div>
+    <div class="tabbarContent">
+        <div class="content active">
+            <div class="newsTitle"></div>
+            <div class="newsTime"></div>
+            <div class="newsContent">1
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 路径导航 -->
+    <!-- <div class="tips"><a href="./research.html">科研成果</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="javascript:;">新闻详情</a> </div> -->
+
+    <!-- <div class="tel">400-8820-8820</div>
+    <div class="zixun">免费热线咨询:</div> -->
+
+    <!-- footer -->
+    <div class="footer">
+
+    </div>
+
+</body>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    $(function () {
+        loadBanner(4)
+        // 标签页
+        $('.tabbar').on('click','.tab',function(){
+            var index = $(this).index();
+            $($(".tab")[index]).addClass("active").siblings().removeClass("active");
+            var title = $(this).attr('data-title');
+            $('.newsTitle').text(title)
+            var id = $(this).attr('data-id');
+            LoadDetail(id);
+        })
+     
+        $('.header-logo').on('click', function () {
+            window.location.href = "../index.html"
+        })
+        $('.footer').load('../html/footer.html')
+        //生产基地分类
+        $Http({
+            url: 'api/deve/deve/sc_type',
+            success: function (res) {
+                console.log(res);
+                var data = res.data;
+                var str = ""
+                var title = data[0].type_name
+                $.each(data, function (index, item) {
+                    str += `
+                <div class="tab" data-id=${item.id} data-title=${item.type_name}>${item.type_name}</div>
+                `
+                })
+                $('.tabbar').html(str);
+                $('.tabbar .tab').eq(0).addClass('active')
+                $('.newsTitle').text(title)
+            },
+            successful: function (res) {
+                id = res.data[0].id
+                console.log(id);
+                LoadDetail(id);
+            }
+        })
+         //生产基地详情
+         function LoadDetail(id) {
+            $Http({
+                url: 'api/deve/deve/deve_info',
+                data: {
+                    id
+                },
+                success: function (res) {
+                    console.log(res);
+                    var data = res.data;
+                    $('.newsContent').html(data.content)
+                }
+            })
+        };
+    })
+</script>
+
+</html>

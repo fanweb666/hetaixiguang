@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+    <title>合泰新光</title>
+</head>
+
+<body>
+    <style>
+        .info-img .bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .info-img .maincontent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            bottom: 0;
+            right: 0;
+            width: 130px;
+            height: 82px;
+            margin-left: -65px;
+            margin-top: -41px;
+        }
+
+        .info-img .maincontent div {
+            position: relative;
+        }
+
+        .info-img .maincontent a {
+            width: 59px;
+            height: 59px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: none;
+            margin: auto;
+        }
+
+
+        .info-img .maincontent img {
+            cursor: pointer;
+        }
+
+        .info-img .bg:hover {
+            background-color: rgba(3, 73, 159, 0.6);
+        }
+
+        .info-img .bg:hover .maincontent a {
+            display: block;
+        }
+    </style>
+
+    <div class="container">
+        <div class="main-header">
+            <div class="header-logo">
+                <img class="w-100 h-100" src="../images/login/logo.png" alt="">
+            </div>
+            <div class="header-nav">
+                <a href="../index.html">首页</a>
+                <a href="./aboutus.html">关于我们</a>
+                <a href="./productList.html">主营产品</a>
+                <a class="active" href="./research.html">科研实力</a>
+                <a href="./downloadCenter.html">信息服务</a>
+                <a href="./news.html">新闻动态</a>
+                <a href="./addUs.html">加入我们</a>
+            </div>
+            <div class="header-sign">
+                <a href="../html/login.html">登录</a>
+                <p>|</p><a href="../html/register.html">注册</a>
+            </div>
+        </div>
+        <div class="main-banner lyf-banner">
+            <!-- <div class="swiper-container" id="researchSwp">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> -->
+                        <img class="w-100 h-100" src="../images/research/research-banner.png" alt="">
+                    <!-- </div>
+                    <div class="swiper-slide">
+                        <img class="w-100 h-100" src="../images/research/research-banner.png" alt="">
+                    </div>
+                </div> -->
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 1L -->
+        <div class="research-scale" style="background-image: url(../images/index/scale.jpg)">
+            <div class="scale-left">
+                <img src="../images/index/scale-left.jpg" alt="">
+            </div>
+            <div class="scale-right">
+                <div class="sright-top">
+                    <div>
+                        <img src="../images/index/scale-righttop.png" alt="">
+                    </div>
+                    <div class="top-text">
+                        <p class="hr-blue"></p>
+                        <p>基础研发</p>
+                        <p>四川赛莱格生物科技股份有限公司是一家专门从事生物医药开发、生
+                            产和销售的科工贸一体化的集团公司。下属有四川合泰新光生物科技
+                            有限公司和四川赛利康生物科技有...
+                        </p>
+                        <div class="scale-icon">
+                            <img class="w-100 h-100" src="../images/index/scale-topicon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="sright-bottom">
+                    <div class="bottom-text">
+                        <p class="hr-blue"></p>
+                        <p>生产基地</p>
+                        <p>下属生产厂赛利康生物科技有限公司</p>
+                        <p>工厂土地征用50亩，厂房建设10000平方，产业化前期预计年产2000
+                            吨，附属设施完善，具备高效的生产力和完善的质量控制管理制度...
+                        </p>
+                        <div class="scale-icon">
+                            <img class="w-100 h-100" src="../images/index/scale-bottomicon.png" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../images/index/scale-rightbottom.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2L -->
+        <div class="platform w-100" style="background-image: url(../images/research/platform-bg.jpg)">
+            <div class="platform-info w-1320">
+                <table></table>
+                <p class="hr-white"></p>
+                <p class="info-title">科研平台<span>目前我公司在研100余个优势品种</span></p>
+                <p class="info-desc">
+                    四川赛莱格生物科技股份有限公司是一家专门从事生物医药开发、生产和销售的科工贸一体化的集团公司。下属有四川合泰新光生物科技有限公司和四川赛利康生物科技有限公司。合泰新光以研发创新多肽药物
+                    和多糖为主要目标，公司于 2011 年 12 月在成都高新区天府生命科技园成立。赛立康生物是一家生产我们拥有知识产权的产品β-葡聚糖为主体的生产和
+                    多糖为主要目标，公司于 2011 年 12 月在成都高新区天府生命科技园成立。赛立康生物是一家生产我们拥有知识产权的产品β-葡聚糖为主体的生产
+                </p>
+            </div>
+        </div>
+
+        <!-- 3L -->
+        <div class="reteam w-100">
+            <div class="reteam-content w-1320">
+                <div class="content-top w-100">
+                    <p class="hr-blue"></p>
+                    <!-- <a href="./research-result.html">查看更多</a> -->
+                    <p class="top-title">科研团队</p>
+                </div>
+                <div class="reteam-info">
+                    <div class="main-info">
+                        <div class="info-img">
+                            <img class="w-100 h-100" src="../images/research/team1.png" alt="">
+                            <div class="bg">
+                                <div class="maincontent">
+                                    <div>
+                                        <a href="javascript:;">
+                                            <img src="../images/research/find.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-desc">
+                            <p>曹勇飞</p>
+                            <p>12年投资及财富管理从业经验；金融MBA，专注私
+                                募投资领域多年；擅长资产配置、房地产
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="main-info">
+                        <div class="info-img">
+                            <img class="w-100 h-100" src="../images/research/team3.png" alt="">
+                            <div class="bg">
+                                <div class="maincontent">
+                                    <div>
+                                        <a href="javascript:;">
+                                            <img src="../images/research/find.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-desc">
+                            <p>曹勇飞</p>
+                            <p>12年投资及财富管理从业经验；金融MBA，专注私
+                                募投资领域多年；擅长资产配置、房地产
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="main-info">
+                        <div class="info-img">
+                            <img class="w-100 h-100" src="../images/research/team2.jpg" alt="">
+                            <div class="bg">
+                                <div class="maincontent">
+                                    <div>
+                                        <a href="javascript:;">
+                                            <img src="../images/research/find.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-desc">
+                            <p>曹勇飞</p>
+                            <p>12年投资及财富管理从业经验；金融MBA，专注私
+                                募投资领域多年；擅长资产配置、房地产
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="main-info">
+                        <div class="info-img">
+                            <img class="w-100 h-100" src="../images/research/team1.png" alt="">
+                            <div class="bg">
+                                <div class="maincontent">
+                                    <div>
+                                        <a href="javascript:;">
+                                            <img src="../images/research/find.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-desc">
+                            <p>曹勇飞</p>
+                            <p>12年投资及财富管理从业经验；金融MBA，专注私
+                                募投资领域多年；擅长资产配置、房地产
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="main-info">
+                        <div class="info-img">
+                            <img class="w-100 h-100" src="../images/research/team2.jpg" alt="">
+                            <div class="bg">
+                                <div class="maincontent">
+                                    <div>
+                                        <a href="javascript:;">
+                                            <img src="../images/research/find.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-desc">
+                            <p>曹勇飞</p>
+                            <p>12年投资及财富管理从业经验；金融MBA，专注私
+                                募投资领域多年；擅长资产配置、房地产
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="main-info">
+                        <div class=" info-img">
+                            <img src="../images/research/team3.png" alt="">
+                            <div class="bg">
+                                <div class="maincontent">
+                                    <div>
+                                        <a href="javascript:;">
+                                            <img src="../images/research/find.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-desc">
+                            <p>曹勇飞</p>
+                            <p>12年投资及财富管理从业经验；金融MBA，专注私
+                                募投资领域多年；擅长资产配置、房地产
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="reteam-page" class="page_div"></div>
+            </div>
+        </div>
+
+        <!-- 4L -->
+        <div class="w-100">
+            <div class="reteam-content w-1320">
+                <div class="content-top w-100">
+                    <p class="hr-blue"></p>
+                    <!-- <a href="javascript:;">查看更多</a> -->
+                    <p class="top-title">科研成果</p>
+                </div>
+            </div>
+            <div class="result w-1320">
+                <div></div>
+                <ul>
+                    <li>2月23日，中国研究团队首次在顶级生物医学杂志发表有关医学人工智能的研究成果 <a href="./researchDetail.html"></a></li>
+                    <li>2月23日，中国研究团队首次在顶级生物医学杂志发表有关医学人工智能的研究成果 <a href="./researchDetail.html"></a></li>
+                    <li>2月23日，中国研究团队首次在顶级生物医学杂志发表有关医学人工智能的研究成果 <a href="./researchDetail.html"></a></li>
+                    <li>2月23日，中国研究团队首次在顶级生物医学杂志发表有关医学人工智能的研究成果 <a href="./researchDetail.html"></a></li>
+                    <li>2月23日，中国研究团队首次在顶级生物医学杂志发表有关医学人工智能的研究成果 <a href="./researchDetail.html"></a></li>
+                </ul>
+            </div>
+            <div id="result-page" class="page_div"></div>
+        </div>
+
+
+        <!-- footer -->
+        <!-- footer -->
+        <div class="footer">
+           
+        </div>
+
+    </div>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/page.js"></script>
+    <script>
+        var swiper = new Swiper('#researchSwp', {
+            loop: true,
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+        });
+        
+    </script>
+    <script src="../js/public.js"></script>
+    <script src="../js/research.js"></script>
+    <script>
+      $(function () {
+        loadBanner(3)
+       // 标签页
+    //    $('.tabbar').on('click','.tab',function(){
+    //         var index=$(this).index();
+    //          $($(".tab")[index]).addClass("active").siblings().removeClass("active")
+    //         $($(".content")[index]).addClass("active").siblings().removeClass("active")
+    //     })
+        $('.header-logo').on('click',function(){
+            window.location.href="../index.html"
+        })
+        $('.footer').load('../html/footer.html')
+    })
+    </script>
+</body>
+
+</html>

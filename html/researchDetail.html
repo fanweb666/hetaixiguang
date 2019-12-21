@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>合泰新光</title>
+    <link rel="stylesheet" href="../css/newsDetail.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+</head>
+
+<body>
+    <div class="main-header">
+        <div class="header-logo">
+            <img class="w-100 h-100" src="../images/login/logo.png" alt="">
+        </div>
+        <div class="header-nav">
+            <a href="../index.html">首页</a>
+            <a href="./aboutus.html">关于我们</a>
+            <a href="./productList.html">主营产品</a>
+            <a class="active" href="./research.html">科研实力</a>
+            <a href="./downloadCenter.html">信息服务</a>
+            <a  href="./news.html">新闻动态</a>
+            <a href="./addUs.html">加入我们</a>
+        </div>
+        <div class="header-sign">
+            <a href="../html/login.html">登录</a>
+            <p>|</p><a href="../html/register.html">注册</a>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner lyf-banner">
+        <img src="../images/aboutus-desc/banner.jpg" alt="">
+    </div>
+
+    <!-- 路径导航 -->
+    <div class="tips"><a href="./research.html">科研成果</a>&nbsp;&nbsp;>&nbsp;&nbsp;<a href="javascript:;">新闻详情</a> </div>
+    <div class="border"></div>
+    <div class="newsTitle"></div>
+    <div class="newsTime"></div>
+    <div class="newsContent">
+      
+    </div>
+    <!-- <div class="tel">400-8820-8820</div>
+    <div class="zixun">免费热线咨询:</div> -->
+
+    <!-- footer -->
+    <div class="footer">
+       
+    </div>
+
+</body>
+<script src="../js/jquery-3.4.1.js"></script>
+<script src="../js/public.js"></script>
+<script>
+    $(function () {
+        loadBanner(4)
+        $('.header-logo').on('click',function(){
+            window.location.href="../index.html"
+        })
+        $('.footer').load('../html/footer.html')
+        var id =window.location.search.split('=')[1]
+        console.log(id)
+        $Http({
+            url: 'api/scie/scie/ach',
+            data: {
+                id,
+            },
+            success:function(res){
+                console.log(res)
+                var data=res.data.data[0];
+                $('.newsTitle').text(data.title);
+                $('.newsTime').text(timeForm(data.time));
+                $('.newsContent').html(data.content)
+            }
+        })
+    })
+</script>
+
+</html>

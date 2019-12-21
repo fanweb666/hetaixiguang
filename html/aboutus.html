@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>关于我们</title>
+</head>
+
+<body>
+    <style>
+        .swpteam .bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .swpteam.maincontent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            bottom: 0;
+            right: 0;
+            width: 130px;
+            height: 82px;
+
+            margin-left: -65px;
+            margin-top: -41px;
+        }
+
+        .swpteam .maincontent div {
+            position: relative;
+        }
+
+        .swpteam .maincontent .swpinfo p:nth-child(1) {
+            font-size: 20px;
+            font-family: MicrosoftYaHei-Bold;
+            font-weight: bold;
+            color: rgba(37, 86, 188, 1);
+            margin-top: 59px;
+            display: none;
+        }
+
+        .swpteam .maincontent .swpinfo p:nth-child(2) {
+            width: 75.8%;
+            margin: auto;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(37, 86, 188, 1);
+            margin-top: 26px;
+            display: none;
+        }
+
+
+        .swpteam .maincontent img {
+            cursor: pointer;
+        }
+
+        .swpteam .bg:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .honner img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swpteam .bg:hover .maincontent p {
+            transition: all 1s;
+        }
+
+        .swpteam .bg:hover .maincontent p {
+            display: block;
+        }
+    </style>
+
+    <div class="container">
+        <div class="main-header">
+            <div class="header-logo">
+                <img class="w-100 h-100" src="../images/login/logo.png" alt="">
+            </div>
+            <div class="header-nav">
+                <a href="../index.html">首页</a>
+                <a class="active" href="./aboutus.html">关于我们</a>
+                <a href="./productList.html">主营产品</a>
+                <a href="./research.html">科研实力</a>
+                <a href="./downloadCenter.html">信息服务</a>
+                <a href="./news.html">新闻动态</a>
+                <a href="./addUs.html">加入我们</a>
+            </div>
+            <div class="header-sign">
+                <a href="../html/login.html">登录</a>
+                <p>|</p><a href="../html/register.html">注册</a>
+            </div>
+        </div>
+
+        <div class="main-banner lyf-banner">
+            <!-- <div class="swiper-container" id="aboutuseSwp">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"> -->
+            <img class="w-100 h-100" src="../images/aboutus-desc/banner.jpg" alt="">
+            <!-- </div>
+                    <div class="swiper-slide">
+                        <img class="w-100 h-100" src="../images/aboutus-desc/banner.jpg" alt="">
+                    </div>
+                </div> -->
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <div class="case_box">
+        <div class="category">
+            <ul>
+                <li class="active case-nav">集团简介</li>
+                <li class="case-nav">发展历程</li>
+                <li class="case-nav">企业文化</li>
+                <li class="case-nav">荣誉资质</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <!-- 企业简介 -->
+            <div class="cont active">
+                <div class="desc-total" style="background-image: url(../images/aboutus-desc/desc-bg.jpg)">
+                    <div class="desc">
+                        <div class="desc-info">
+                            <p class="hr-blue"></p>
+                            <p class="desc-title">集团介绍</p>
+                            <div class="desc-detail">
+                                <p>四川合泰新光生物科技有限公司</p>
+                                <p>四川合泰新光生物科技有限公司是一家专门从事生物医药开发的高新技术科研企业。新光生
+                                    物凭借具有知识产权的微生物发酵技术和生产平台，以研发创新多糖药物为主要目标，开发
+                                    有助于人类健康的新食品原料、动物饲料添加剂、化妆品原料、絮凝剂和生物医用原料。公
+                                    司拥有多项国家发明专利及PCT，目前生产的新型天然水溶性β-1，3葡聚糖技术属全球独创
+                                    且全球独家生产。研发部门具备领先的研发实力和研发设备，下属有生产工厂...
+                                </p>
+                                <!-- <div class="desc-icon">
+                                            <img class="w-100 h-100" src="../images/index/about-icon.png" alt="">
+                                        </div> -->
+                            </div>
+                        </div>
+                        <div class="desc-img">
+                            <img class="w-100 h-100" src="../images/aboutus-desc/desc.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="desc-bottom">
+                        <div class="bottom-part">
+                            <div class="bottom-icon">
+                                <img src="../images/aboutus-desc/desc-icon1.png" alt="">
+                            </div>
+                            <div class="bottom-text">
+                                <p>企业愿景</p>
+                                <p>力争创造世界一流的健康源企业</p>
+                            </div>
+                        </div>
+                        <div class="bottom-part">
+                            <div class="bottom-icon">
+                                <img src="../images/aboutus-desc/desc-icon3.png" alt="">
+                            </div>
+                            <div class="bottom-text">
+                                <p>企业使命</p>
+                                <p>依托生物科技，创造健康生活</p>
+                            </div>
+                        </div>
+                        <div class="bottom-part">
+                            <div class="bottom-icon">
+                                <img src="../images/aboutus-desc/desc-icon2.png" alt="">
+                            </div>
+                            <div class="bottom-text">
+                                <p>企业理念</p>
+                                <p>智慧凝聚力量，科技造福人类</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leader">
+                    <div class="leader-left">
+                        <img class="w-100 h-100 show" src="../images/aboutus-desc/leader-left.jpg" alt="">
+                        <img class="w-100 h-100" src="../images/aboutus-desc/leader-icon2.png" alt="">
+                        <img class="w-100 h-100" src="../images/aboutus-desc/leader-icon3.png" alt="">
+                    </div>
+                    <div style="background-image: url(../images/aboutus-desc/leader-right-bg.jpg);">
+                        <p class="hr-white"></p>
+                        <p>领导团队</p>
+                        <div class="leader-img">
+                            <img class="w-100 h-100" src="../images/aboutus-desc/leader-icon1.png" alt="">
+                            <img class="w-100 h-100" src="../images/aboutus-desc/leader-icon2.png" alt="">
+                            <img class="w-100 h-100" src="../images/aboutus-desc/leader-icon3.png" alt="">
+                        </div>
+                        <div class="leader-txt-list">
+                            <div class="leader-txt show">
+                                <p class="leader-name">王义翘（Daniel I.C. Wang）</p>
+                                <p class="leader-desc">王义翘（Daniel I.C. Wang）教授是麻省理工学院的十四位学院教授之一（Institute Pro
+                                    fessor, MIT Highest Honor），美国工程院资深院长
+                                </p>
+                            </div>
+                            <div class="leader-txt ">
+                                <p class="leader-name">张尧（Daniel I.C. Wang）</p>
+                                <p class="leader-desc">王义翘（Daniel I.C. Wang）教授是麻省理工学院的十四位学院教授之一（Institute Pro
+                                    fessor, MIT Highest Honor），美国工程院资深院长
+                                </p>
+                            </div>
+                            <div class="leader-txt ">
+                                <p class="leader-name">垃圾袋（Daniel I.C. Wang）</p>
+                                <p class="leader-desc">王义翘（Daniel I.C. Wang）教授是麻省理工学院的十四位学院教授之一（Institute Pro
+                                    fessor, MIT Highest Honor），美国工程院资深院长
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- <div class="leader-icon">
+                                <img src="../images/index/about-icon.png" alt="">
+                            </div> -->
+                    </div>
+                </div>
+
+                <div class="honner">
+                    <p class="hr-blue"></p>
+                    <p>公司获得</p>
+                    <div class="honner-show">
+                        <div class="swiper-container honnerSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="show-part">
+                                        <div>
+                                            <img src="../images/aboutus-desc/honner1.png" alt="">
+                                        </div>
+                                        <p>2014年获得国家科技部“中小企业创新基金”</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="show-part">
+                                        <div>
+                                            <img src="../images/aboutus-desc/honner2.png" alt="">
+                                        </div>
+                                        <p>2014年10月获得“国家高新技术企业”</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="show-part">
+                                        <div>
+                                            <img src="../images/aboutus-desc/honner3.jpg" alt="">
+                                        </div>
+                                        <p>2015年5月获得”成都市战略新兴产业项目”</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team">
+                    <table></table>
+                    <p class="hr-blue"></p>
+                    <p class="team-title">团队风采</p>
+                    <div class="team-swiper">
+                        <div class="swiper-container" id="teamSwp2">
+                            <div class="swiper-wrapper swpteam">
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team1.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team2.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team3.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team3.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team1.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team2.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team3.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../images/aboutus-desc/team3.png" alt="">
+                                    <div class="bg">
+                                        <div class="maincontent">
+                                            <div class="swpinfo">
+                                                <p>—— 活动标题 ——</p>
+                                                <p>
+                                                    委托的项目评审工作已圆满结束 ，于2019-04-30
+                                                    在采购与招标网发布 2019年牟平区5条背街小巷振
+                                                    兴街、春晓街、工六巷、金系街、牟系路）道路改
+                                                    造工程施工标段1中标候选人公示，现将成交供应商
+                                                    名单公告。 全省招标类信息系统中标候选人公示项
+                                                    目编号XDL项X5X
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 发展历程 -->
+            <div class="cont histroy-cont">
+                <div class="biz_title">
+                    <p class="hr-blue"></p>
+                    <h2>发展历程</h2>
+                </div>
+                <div class="histroy-img">
+                    <img class="w-100 h-100" src="../images/aboutus-histroy/histroy-top.jpg" alt="">
+                </div>
+                <div class="zysb">
+                    <div class="biz_timtline-box">
+                        <div class="biz_timeline">
+                            <!-- <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2012.12</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p> 企业在成都高新区天府生命科技园成立，注册资金1800万元 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2013.02</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>获得国家科技部“科技型中小企业创新基金”无偿资金支持进入产品中试阶段</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2014.03</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>获得“成都市战略新兴产业项目”、“成都市产学研发实验室称号”</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2013.09</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>获得 “国家高新技术企业”</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2016.06</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>取得了成都市科技局“产学研联合实验室”授牌；</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2017.03</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>“获得成都市战略新兴产业项目”、“成都市产学研发实验室称号”</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2017.03</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>进入产业化阶段，在罗江工业园区落户，总投资5000万的工厂开始建设</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2017.03</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>产品获准进入日本市场</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="biz-timeline-box  clearfix">
+                                <div class="biz_timeline-time">2017.03</div>
+                                <div class="biz_timeline-node"></div>
+                                <div class="biz_timeline-eventbox">
+                                    <div class="biz_timeline-event">
+                                        <p>通过国家卫健委新食品原料技术审评美国FDA递交食
+                                            品成分和动物饲料添加剂注册资料，被认定为全球首
+                                            家天然水溶性β-1，3葡聚糖
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="biz_longString"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 企业文化 -->
+            <div class="cont">
+                <div class="culture w-1200">
+                    <p class="hr-blue"></p>
+                    <p>企业文化</p>
+                    <p class="lyf-keyword">—— 信守承诺、同心同德、同舟共济 ——</p>
+                    <!-- <div class="culture-img w-100">
+                            <div>
+                                <img class="w-100 h-100" src="../images/aboutus-culture/cultrue-left.jpg" alt="">
+                            </div>
+                            <div>
+                                <img class="w-100 h-100" src="../images/aboutus-culture/cultrue-right.png" alt="">
+                            </div>
+                        </div> -->
+                    <p class="cultureinfo-cn">
+                        <!-- 四川赛莱格生物科技股份有限公司是一家专门从事生物医药开发、生产和销售的科工贸一体化的集团公司。下属有四川合泰新光生物科技有限公司和四川赛利康生物科技有限公司。合泰新光
+                            以研发创新多肽药物和多糖为主要目标，公司于 2011 年 12 月在成都高新区天府生命科技园成立。赛立康生物是一家生产我们拥有知识产权的产品β-葡聚糖为主体的生产基地四川赛莱格
+                            生物科技股份有限公司是一家专门从事生物医药开发、生产和销售的科工贸一体化的集团公司。下属有四川合泰新光生物科技有限公司和四川赛利康生物科技有限公司。合泰新光以研发创
+                            新多肽药物和多糖为主要目标，公司于 2011 年 12 月在成都高新区天府生命科技园成立。赛立康生物是一家生产我们拥有知识产权的产品β-葡聚糖为主体的生产基地
+
+                            四川赛莱格生物科技股份有限公司是一家专门从事生物医药开发、生产和销售的科工贸一体化的集团公司。下属有四川合泰新光生物科技有限公司和四川赛利康生物科技有限公司。合泰新光
+                            以研发创新多肽药物和多糖为主要目标，公司于 2011 年 12 月在成都高新区天府生命科技园成立。赛立康生物是一家生产我们拥有知识产权的产品β-葡聚糖为主体的生产基地四川赛莱格
+                            生物科技股份有限公司是一家专门从事生物医药开发、生产和销售的科工贸一体化的集团公司。下属有四川合泰新光生物科技有限公司和四川赛利康生物科技有限公司。合泰新光以研发创
+                            新多肽药物和多糖为主要目标，公司于 2011 年 12 月在成都高新区天府生命科技园成立。赛立康生物是一家生产我们拥有知识产权的产品β-葡聚糖为主体的生产基地 -->
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- 荣誉资质 -->
+            <div class="cont">
+                <div class="our-honner">
+                    <p class="hr-blue"></p>
+                    <p>荣誉资质</p>
+                    <div class="w-100 img-container">
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner2.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-img">
+                            <img src="../images/aboutus-honner/honner1.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner3.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner4.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner5.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner6.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner7.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner7.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner7.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner7.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner7.png" alt="">
+                        </div>
+                        <div class="honner-imgx">
+                            <img src="../images/aboutus-honner/honner7.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="footer">
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        var zysb = 0;
+        var fzlc = false;
+        $('.header-logo').on('click', function () {
+            window.location.href = "../index.html"
+        })
+        // tab选项卡
+        $(function () {
+            $('.case-nav').click(function () {
+                var i = $(this).index();
+                console.log(i);
+
+                $(this).addClass('active').siblings().removeClass('active');
+                console.log($('.content .cont'));
+                $('.content .cont').eq(i).addClass('active').siblings().removeClass(
+                    'active');
+                if (i == 1) {
+                    console.log($('.zysb'))
+                   
+                    //发展历程（）
+                    $Http({
+                        url: 'api/au/au/course',
+                        success: function (res) {
+                            console.log(res, 7)
+                            var data = res.data;
+                            var str = ''
+                            $.each(data, function (index, item) {
+                                str += `
+            <div class="biz-timeline-box  clearfix">
+                <div class="biz_timeline-time">${timeForm(item.time)}</div>
+                <div class="biz_timeline-node"></div>
+                <div class="biz_timeline-eventbox">
+                    <div class="biz_timeline-event">
+                        <p> ${item.brie} </p>
+                    </div>
+                </div>
+            </div>
+                `
+                            })
+                            $('.biz_timeline').html(str)
+                            zysb = $('.zysb').height();
+                            console.log(zysb)
+                            $('.biz_longString').css('height',zysb)
+                        }
+                    })
+                }
+            })
+        });
+
+        // 时间轴
+        // $(function(){
+        //     var item = $(".biz-timeline-box").length;
+        //     var height = $(".biz-timeline-box")[0].offsetHeight + 45;
+        //     $(".biz_longString").css('height',height*item+57);
+        // })
+    </script>
+    <script src="../js/public.js"></script>
+    <script src="../js/aboutus.js"></script>
+    <script>
+        loadBanner(2)
+    </script>
+
+
+</body>
+
+</html>

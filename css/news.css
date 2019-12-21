@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+    background: url("../images/index/application.jpg") no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.content * {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 1320px;
+    /* overflow: hidden; */
+    margin: auto;
+    padding: 61px 0 0;
+}
+
+.tuijian {
+    width: 1320px;
+    height: 570px;
+    background:  no-repeat;
+    background-size:100% 100%;
+    /* margin: 61px auto; */
+    font-size:20px;
+    color:#fff;
+    font-weight: bold;
+    padding-top:380px;
+   
+}
+
+.lyf-tuijian{
+   
+    margin-left:40px;
+}
+.lyf-tuijian >p{
+    margin-bottom:20px; 
+}
+.lyf-tuijian>div{
+    width:150px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    color:#03499F;
+    font-size:16px;
+    background-color:#fff;
+    font-weight: normal;
+    cursor: pointer;
+}
+.img {
+    width: 100%;
+    /* object-fit: contain; */
+    height: 100%;
+}
+
+.border {
+    width: 30px;
+    height: 4px;
+    background: rgba(3, 73, 159, 1);
+    margin-top: 61px;
+}
+
+.title {
+    font-size: 24px;
+    font-family: MicrosoftYaHei-Bold;
+    font-weight: bold;
+    color: rgba(3, 73, 159, 1);
+    line-height: 60px;
+}
+
+.newsContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+.newsBox {
+    width: 420px;
+    height: 336px;
+    margin-bottom: 30px;
+}
+
+.imgs {
+    width: 420px;
+    height: 232px;
+}
+
+.newsBottom {
+    width: 420px;
+    height: 104px;
+    background: rgba(255, 255, 255, 1);
+    padding: 0 19px;
+}
+
+.time {
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(43, 76, 117, 1);
+    line-height: 40px;
+}
+
+.newsTilte {
+    font-size: 18px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(42, 42, 42, 1);
+    line-height: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.newsBox:hover{
+    box-shadow:0px 2px 15px 0px rgba(196,206,224,1);
+}
+.newsBox:hover .newsTilte{
+color:#03499F
+}
+/* .page_div{
+    
+} */

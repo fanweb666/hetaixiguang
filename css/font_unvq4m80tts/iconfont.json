@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4216651",
+      "name": "小红旗",
+      "font_class": "xiaohongqi--",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "5190356",
+      "name": "小红旗",
+      "font_class": "xiaohongqi",
+      "unicode": "e874",
+      "unicode_decimal": 59508
+    },
+    {
+      "icon_id": "6624882",
+      "name": "小红旗",
+      "font_class": "xiaohongqi1",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "9412788",
+      "name": "小红旗",
+      "font_class": "xiaohongqi2",
+      "unicode": "e501",
+      "unicode_decimal": 58625
+    }
+  ]
+}

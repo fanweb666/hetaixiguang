@@ -1,0 +1,107 @@
+
+body {
+    margin: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+}
+
+.banner>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.tabbar {
+    height: 80px;
+    background: rgba(250, 250, 250, 1);
+    display: flex;
+    justify-content: center;
+}
+
+.tips {
+    width: 1200px;
+    margin: auto;
+    font-size: 18px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(121, 121, 121, 1);
+    line-height: 60px
+}
+
+.tips>a:nth-child(2) {
+    font-weight: bold;
+}
+
+.border {
+    width: 48px;
+    height: 4px;
+    background: rgba(3, 73, 159, 1);
+    margin-top: 10px;
+    margin: auto;
+}
+
+.newsTitle {
+    width: 1200px;
+    margin: auto;
+    font-size: 24px;
+    font-family: MicrosoftYaHei-Bold;
+    font-weight: bold;
+    color: rgba(3, 73, 159, 1);
+    line-height: 28px;
+    text-align: center;
+    margin-top: 27px;
+}
+
+.newsTime {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(78, 78, 78, 1);
+    line-height: 30px;
+}
+
+.newsContent {
+    width: 1200px;
+    margin: auto auto 70px;
+    ;
+}
+.newsContent img{
+    max-width: 100%;
+}
+p {
+    margin: 25px auto;
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(78, 78, 78, 1);
+    line-height: 30px;
+}
+
+.tel {
+    font-size: 24px;
+    font-family: MicrosoftYaHei-Bold;
+    font-weight: bold;
+    color: rgba(3, 73, 159, 1);
+    line-height: 24px;
+    text-align: center;
+}
+
+.zixun {
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(42, 42, 42, 1);
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}

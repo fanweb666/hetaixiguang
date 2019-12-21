@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <title>合泰新光</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-header">
+            <div class="header-logo">
+                <img class="w-100 h-100" src="../images/login/logo.png" alt="">
+            </div>
+            <div class="header-nav">
+                <a href="../index.html">首页</a>
+                <a href="./aboutus.html">关于我们</a>
+                <a href="./productList.html">主营产品</a>
+                <a href="./research.html">科研实力</a>
+                <a href="./downloadCenter.html">信息服务</a>
+                <a href="./news.html">新闻动态</a>
+                <a href="./addUs.html">加入我们</a>
+            </div>
+            <div class="header-sign">
+                <a class="active" href="../html/login.html">登录</a>
+                <p>|</p><a href="../html/register.html">注册</a>
+            </div>
+        </div>
+        <div class="lyf-login">
+        <div class="login-total"
+            style="background-image: url(../images/login/login-center1.jpg);background-size:no-repeat;">
+            <table></table>
+            <div class="login-center">
+                <p>登录</p>
+                <div class="enter">
+                    <p>手机号</p>
+                    <input placeholder="请输入手机号" type="text" name="phone">
+                    <p>密码</p>
+                    <input placeholder="请输入密码" type="password" name="pass">
+                </div>
+                <a class="login-submit" >登录</a>
+            </div>
+        </div>
+    </div>
+        <!-- footer -->
+        <div class="footer">
+            <!-- <div class="hot-line">
+                        <p>400-8820-8820</p>
+                        <p>免费热线咨询:</p>
+                    </div> -->
+
+        </div>
+    </div>
+    <script src="../js/public.js"></script>
+    <script>
+        $(function(){
+            $('.header-logo').on('click',function(){
+            window.location.href="../index.html"
+        })
+            $('.footer').load('../html/footer.html')
+            $('.login-submit').on('click',function(){
+                var obj=$('input');
+                var params={};
+                $.each(obj,function(index,item){
+                    var k=item.name;
+                    params[k]=$('input[name='+k+']').val();
+
+                })
+                $Http({
+                    url:'api/user/user/login',
+                    data:params,
+                    success:function(res){
+                        // console.log(res)
+                        if(res.code==0){
+                            layer.open({
+                                content:res.msg,
+                            })
+                        }else{
+                            sessionStorage.setItem('token',res.data);
+                            layer.open({
+                                content:res.msg,
+                                yes:function(){
+                                    window.history.back(-1)
+                                }
+                            })
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/public.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../layui/layui.all.js"></script>
+    <title>合泰新光</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-header">
+            <div class="header-logo">
+                <img class="w-100 h-100" src="../images/login/logo.png" alt="">
+            </div>
+            <div class="header-nav">
+                <a href="../index.html">首页</a>
+                <a href="./aboutus.html">关于我们</a>
+                <a href="./productList.html">主营产品</a>
+                <a href="./research.html">科研实力</a>
+                <a href="./downloadCenter.html">信息服务</a>
+                <a href="./news.html">新闻动态</a>
+                <a href="./addUs.html">加入我们</a>
+            </div>
+            <div class="header-sign">
+                <a href="../html/login.html">登录</a>
+                <p>|</p><a class="active" href="../html/register.html">注册</a>
+            </div>
+        </div>
+
+        <div class="login-total"
+            style="background-image: url(../images/login/login-center1.jpg);background-size:no-repeat;">
+            <table></table>
+            <!-- <div class="login-center">
+                <p>用户注册</p>
+                <div class="enter">
+                    <p>手机号</p>
+                    <input placeholder="请输入手机号" type="text">
+                    <p>验证码</p>
+                    <div class="verification-total">
+                        <input class="verification" placeholder="请输入验证码" type="text">
+                        <div class="register-button">获取验证码</div>
+                    </div>
+                </div>
+                <a class="login-submit" href="">注册并登陆</a>
+                <p class="register-text">已有账号，<a href="./login.html">去登陆</a></p>
+            </div> -->
+            <div class="login-center">
+                <p>用户注册</p>
+                <!-- <div class="enter">
+                        <p>手机号</p>
+                        <input placeholder="请输入手机号" type="text">
+                        <p>验证码</p>
+                        <div class="verification-total">
+                            <input class="verification" placeholder="请输入验证码" type="text">
+                            <div class="register-button">获取验证码</div>
+                        </div>
+                    </div> -->
+                <div class="lyf-form">
+                    <div class="lyf-input">
+                        <p>姓名</p><input type="text" name="nick">
+                    </div>
+                    <div class="lyf-input">
+                        <p>邮箱</p><input type="email" name="mail">
+                    </div>
+                    <div class="lyf-input">
+                        <p>公司</p><input type="text" name="canm_name">
+                    </div>
+                    <div class="lyf-input">
+                        <p>职务</p><input type="text" name="duty">
+                    </div>
+                    <div class="lyf-input">
+                        <p>手机号</p><input type="phone" name="phone">
+                    </div>
+                    <div class="lyf-input">
+                        <p>密码</p><input type="password" name="pass" id="mima">
+                    </div>
+                    <div class="lyf-input">
+                        <p>确认密码</p><input type="password" id="mima2" name="pass">
+                    </div>
+                </div>
+                <a class="login-submit">注册</a>
+                <p class="register-text">已有账号，<a href="./login.html">去登陆</a></p>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+
+        </div>
+    </div>
+    <script></script>
+    <script>
+        $(function () {
+
+            $('.header-logo').on('click', function () {
+                window.location.href = "../index.html"
+            })
+            $('.footer').load('../html/footer.html')
+            //注册用户
+            $('.login-submit').on('click', function () {
+                var obj = $('input');
+                console.log(obj)
+                var params = {};
+                $.each(obj, function (index, item) {
+                    // console.log(item.name)
+                    var key = item.name;
+                    var val = $('input[name=' + key + ']').val();
+                    params[key] = val;
+                    console.log(val)
+                })
+                if ($('#mima').val() == $('#mima2').val()) {
+                    $Http({
+                        url: 'api/user/user/re_user',
+                        data: params,
+                        type: 'post',
+                        success: function (res) {
+                            console.log(res)
+                            layer.open({
+                                content: res.msg,
+                                yes: function (index, layero) {
+                                    if (res.code == 1) {
+                                        window.history.back(-1)
+                                    }
+                                    layer.close(index)
+                                }
+                            });
+                        }
+                    })
+                } else {
+                    layer.open({
+                        content: '两次密码输入不一致！',
+                    });
+                }
+
+                // console.log(params)
+            })
+
+        })
+    </script>
+</body>
+
+</html>

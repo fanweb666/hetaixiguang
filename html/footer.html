@@ -1,0 +1,108 @@
+ <div class="footer-nav">
+      <ul class="nav-list">
+          <li style="margin-top:20px">
+              <img src="../images/login/logo.png" width="196px" alt="">
+          </li>
+          <li>
+              <div>
+                  <a href="">首页</a>
+              </div>
+          </li>
+          <li>
+              <div>
+                  <a href="../html/aboutus.html">关于我们</a>
+                  <!-- <a href="">企业简介</a>
+                    <a href="">企业文化</a>
+                    <a href="">发展历程</a>
+                    <a href="">资质荣誉</a> -->
+              </div>
+          </li>
+          <li>
+              <div>
+                  <a href="../html/productList.html">主营产品</a>
+                  <!-- <a href="">塞莱可</a>
+                    <a href="">速乐可</a>
+                    <a href="">赛立康</a> -->
+              </div>
+          </li>
+          <li>
+              <div>
+                  <a href="../html/research.html">科研实力</a>
+                  <!-- <a href="">研发领域</a>
+                    <a href="">前沿科技</a> -->
+              </div>
+          </li>
+          <li>
+              <div>
+                  <a href="../html/downloadCenter.html">信息服务</a>
+              </div>
+          </li>
+          <li>
+              <div>
+                  <a href="../html/news.html">新闻动态</a>
+              </div>
+          </li>
+          <li>
+              <div>
+                  <a href="../html/addUs.html">加入我们</a>
+                  <!-- <a href="">社会招聘</a>
+                    <a href="">实习生</a> -->
+              </div>
+          </li>
+      </ul>
+      <!-- <div class="erweima">
+            <img src="./images/index/erweima.png" alt="">
+        </div> -->
+  </div>
+  <div class="footer-connection">
+      <!-- <div class="footer-connection-left">
+            <img src="./images/index/phone (1).png" width="56px" height="56px" alt="">
+            <div class="content">
+                <p>24小时服务热线</p>
+                <p>400-8820-8820</p>
+            </div>
+        </div>
+        <div class="footer-connection-right">
+
+        </div> -->
+      <div class="zongbu">
+          <p>合泰新光生物科技有限公司总部地址：</p>
+          <p><img src="../images/index/position.png" width="12px" alt=""><span>成都市青羊区草堂路58号草堂交通饭店二楼</span></p>
+          <p><img src="../images/index/phone.png" width="16px" alt=""><span>028-06621521</span></p>
+          <p><img src="../images/index/email.png" width="16px" alt=""><span>postmaster@salecan.com.cn</span>></p>
+      </div>
+      <div class="yanfabu">
+          <p>研发部地址：</p>
+          <p><img src="../images/index/position.png" width="12px" alt=""><span>成都市高新区科园南路88号B6栋703</span></p>
+          <p><img src="../images/index/phone.png" width="16px" alt=""><span>电话：028-85219331</span></p>
+      </div>
+      <div class="gongchangdizhi">
+          <p>四川赛利康生物科技有限公司（工厂）地址：</p>
+          <p><img src="../images/index/position.png" width="12px" alt=""><span>四川罗江经济开发区城南工业园兴业大道188号</span></p>
+          <p><img src="../images/index/phone.png" width="16px" alt=""><span>电话：0838-3305666</span></p>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>©成都合泰新光有限公司版权所有 | 蜀 ICP备15017352号 | 互联网药品信息服务资格证书：（川）-非经营性-2015-0067</p>
+  </div>
+  <script src="../js/public.js"></script>
+  <script>
+      console.log(33)
+      $(function () {
+          //联系地址
+          $Http({
+              url: 'api/link/link/link',
+              success: function (res) {
+                //   console.log(res)
+                  var data = res.data;
+                  $('.zongbu p').eq(1).children('span').text(data[0].link)
+                  $('.zongbu p').eq(2).children('span').text('电话：' + data[0].phone)
+                  $('.zongbu p').eq(3).children('span').text(data[0].mail)
+                  $('.yanfabu p').eq(1).children('span').text(data[1].link)
+                  $('.yanfabu p').eq(2).children('span').text('电话：' + data[1].phone)
+                  $('.gongchangdizhi p').eq(1).children('span').text(data[2].link)
+                  $('.gongchangdizhi p').eq(2).children('span').text('电话：' + data[2].phone)
+              }
+          })
+      })
+  </script>
